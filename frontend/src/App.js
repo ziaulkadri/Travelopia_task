@@ -1,5 +1,7 @@
+import TravelForm from './pages/TravelForm';
+
 function App() {
-	return <div>Hello world</div>;
+	return <TravelForm />;
 }
 
 export default App;
