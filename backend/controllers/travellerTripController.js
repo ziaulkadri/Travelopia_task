@@ -4,7 +4,7 @@ const Traveller = require('../model/travellerModel');
 // @route Get/api/trip
 // @access public
 const getTrip = asyncHandler(async (req, res) => {
-	const trip = await Traveller.find({ email: req.params.email });
+	const trip = await Traveller.find();
 	res.status(200).json(trip);
 });
 
