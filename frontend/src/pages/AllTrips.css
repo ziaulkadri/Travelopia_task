@@ -1,0 +1,30 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .card p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
