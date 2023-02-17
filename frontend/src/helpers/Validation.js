@@ -19,9 +19,11 @@ export function checkEmpltyField(value) {
 	if (!value) return 'Please Enter all the values';
 	return true;
 }
-export default {
+const validation = {
 	nameValidator,
 	emailValidator,
 	checkEmpltyField,
 	validateNonNegativeNumber,
 };
+
+export default validation;

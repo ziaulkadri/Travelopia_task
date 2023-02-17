@@ -1,7 +1,7 @@
-import TravelForm from './pages/TravelForm';
+import TravellerTrips from './pages/TravellerTrips';
 
 function App() {
-	return <TravelForm />;
+	return <TravellerTrips />;
 }
 
 export default App;
