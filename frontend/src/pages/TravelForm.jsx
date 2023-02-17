@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TravellerService from '../services/traveller.service';
 import { emailValidator, nameValidator, validateNonNegativeNumber } from '../helpers/Validation';
 
 function TravelForm() {
@@ -30,7 +31,12 @@ const onChange = (e) => {
     
 }
 
-  const handleSubmit = (event) => {
+
+
+
+
+
+  const handleSubmit =async (event) => {
     event.preventDefault();
 
     const emailVallidationError =  emailValidator(formData.email)
@@ -64,23 +70,34 @@ const onChange = (e) => {
 
 
     else{
-        console.log('Form submitted:', formData);
 
-    setFormData({name:'',
+        await TravellerService.setTrip(formData).then(
+            (response) => {
+           console.log(response)
+           setFormData({name:'',
     email:'',
     destination:'',
     numTravelers:'',
     budget:''})
+    setFormError({nameError:false,
+        emailError:false,
+        destinationError:false,
+        numTravelersError:false,
+        budgetError:false})
+        
+    
+            },
+            (error) => {
+              console.log(error)
+            }
+          )
+
+    
     
 
-    setFormError({nameError:false,
-    emailError:false,
-    destinationError:false,
-    numTravelersError:false,
-    budgetError:false})
-    }
     
-  };
+    
+  }}
 
   return (
     <>

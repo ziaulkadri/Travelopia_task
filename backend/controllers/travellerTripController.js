@@ -21,8 +21,8 @@ const setTrip = asyncHandler(async (req, res) => {
 		name: req.body.name,
 		email: req.body.email,
 		destination: req.body.destination,
-		no_of_travelers: req.body.no_of_travelers,
-		budget_per_person: req.body.budget_per_person,
+		no_of_travelers: Number(req.body.numTravelers),
+		budget_per_person: Number(req.body.budget),
 	});
 	res.status(200).json({ message: 'Successfully created' });
 });
