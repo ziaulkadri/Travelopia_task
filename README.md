@@ -36,6 +36,8 @@ open the terminal in vsCode
 
 
 the project will be running on browser
+#Toggle Button
+There is a toggle button that will be showing the Form when clicked and all the trips that submitted from the form 
 
 
 
